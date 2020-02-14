@@ -1,10 +1,10 @@
 import './../css/app.scss';
 
-function component (){
+var component = function () {
     let element = document.createElement('div');
-    element.innerHTML = "hello world";
+    element.innerHTML = 'hellooooooooooooooooooooooooooooooooooo world';
     return element;
 
-}
+};
 
 document.body.appendChild(component());
