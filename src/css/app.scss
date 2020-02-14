@@ -1,0 +1,11 @@
+$color : green;
+
+body{
+    background-color:#121214;
+    color: white;
+    h1
+    {
+        color :$color;
+    }
+}
+
