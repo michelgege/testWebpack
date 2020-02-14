@@ -1,11 +1,13 @@
-$color : red;
 
 body{
     background-color:#121214;
     color: white;
-    h1
+   
+
+
+ h1
     {
-        color :$color;
+        color :red;
     }
 
     img
@@ -15,4 +17,3 @@ body{
         display: block;
     }
 }
-

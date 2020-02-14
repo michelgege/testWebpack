@@ -19,9 +19,14 @@ config = {
                 use : 'html-loader'
             },
 
+            
             {
                 test : /\.scss$/,
-                use : ['style-loader','css-loader','sass-loader']
+                use : [
+                    {loader: 'style-loader'},
+                    {loader :'css-loader'},
+                    {loader :'sass-loader'}
+                ]
             },
 
             {
@@ -30,6 +35,19 @@ config = {
                     {
                         loader : 'file-loader',
                         options : {
+                            context: path.join(__dirname, '/src'),
+                            name : '[path][name].[ext]',
+                            esModule:false
+                        }
+                    }
+                ]
+            },
+            {
+                test : /\.(woff(2)?|ttf|eot)$/,
+                use : [
+                    {
+                        loader : 'file-loader',
+                        options : {  
                             name : '[path][name].[ext]',
                             esModule:false
                         }
